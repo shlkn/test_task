@@ -10,11 +10,11 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
-#define PORT     8080
-#define IP       "127.0.0.1"
+#define PORT     7051
+#define IP       "192.168.200.202"
 #define MAXLINE 1024
 
 
-void start(char *buffer);
+void port_listening(char *buffer); // listening on the specified port
 
 #endif // INET_CODE_H

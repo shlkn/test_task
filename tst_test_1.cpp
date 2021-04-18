@@ -1,37 +1,34 @@
 #include <QtTest>
 #include <inet_code.h>
-// add necessary includes here
 
-class test_1 : public QObject
+class test : public QObject
 {
     Q_OBJECT
-
 public:
-    test_1();
-    ~test_1();
-
+    test();
+    ~test();
 private slots:
-    void test_case1();
-
+    void test_case();
 };
 
-test_1::test_1()
+test::test()
 {
 
 }
 
-test_1::~test_1()
+test::~test()
 {
 
 }
 
-void test_1::test_case1()
+void test::test_case()
 {
     char buffer[MAXLINE];
-    start(buffer);
+    port_listening(buffer);
     QCOMPARE(buffer, "simple test");
+    QCOMPARE(buffer, "simple test!");
 }
 
-QTEST_APPLESS_MAIN(test_1)
+QTEST_APPLESS_MAIN(test)
 
 #include "tst_test_1.moc"
